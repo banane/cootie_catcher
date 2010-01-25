@@ -52,3 +52,5 @@ Migrating to CreateFortunes (20100121033842)
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("colors")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("cootie_catchers")[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("fortunes")[0m
+  [4;36;1mColor Load (0.9ms)[0m   [0;1mSELECT * FROM "colors" [0m
+  [4;35;1mColor Load (0.2ms)[0m   [0mSELECT * FROM "colors" [0m

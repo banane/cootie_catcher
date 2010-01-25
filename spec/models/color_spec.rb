@@ -1,52 +1,35 @@
-ENV["RAILS_ENV"] = "test"
-require File.expand_path(File.dirname(__FILE__) + "/spec_helper.rb")
+require File.expand_path(File.dirname(__FILE__) + "../../spec_helper.rb")
 
 describe Color do
-  
- 
-
-  it "has 8 numbers inside" do
-  
-  end
-  
-  it "has 8 fortune statements or predictions" do 
-  end
-  
-  it "accepts choice of color" do
-  
-  end
-  
-  it "asks someone a color preference. This is the first stage." do
-  
-  end
-  
-  it "the length of the word of the color is the number of times it loops" do
-    
+  it "has at least 7 colors" do
+    Color::BASE_COLORS.length.should == 7
   end
 
-  it "there is a bit that contains the on and off state" do
-  end
+  describe "basic colors" do
+#    before do
+#      color = Color.new
+#    end
+    it "should return 4 colors" do
+      our_colors = ["marron","azul","anaranjado","amarillo"].sort
 
-  
-  it "one set contains 1,2,5,6 and is set to the bit off state" do
-    
-  end
-  
-  it "another set is 3,4,7,8 and is set to the on state" do
-    
-  end
-  
-  it "lets the user select a number of the set the second stage" do
-  end
-  
-  it "lets the user select a number of the set the third stage " do
-  end
-  
-  it "keeps track of which stage the user's at" do
-  end
+      mocked_colors = mock(Color)
+      mocked_colors.should_receive(:basic_colors).with(no_args()).and_return(our_colors)
+      mocked_colors.basic_colors
 
-  it "has a final fortune for the last number they've picked on the third stage" do
-    
-  end  
-    
+#      generated_rand_colors = color.basic_colors
+#      single_test_color = generated_rand_colors[0]
+
+    end
+    it "should be a random set from the base colors" do
+      # that there are 4
+      generated_rand_colors.length.should == 4
+
+      #this color is in the base colors array
+      generated_rand_colors.each  do |c|
+        base_colors.include?(c).should_be true
+      end
+
+    end
+  end
 end
+
