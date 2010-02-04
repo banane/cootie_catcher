@@ -6,9 +6,6 @@ describe Color do
   end
 
   describe "basic colors" do
-#    before do
-#      color = Color.new
-#    end
     it "should return 4 colors" do
       our_colors = ["marron","azul","anaranjado","amarillo"].sort
 
@@ -16,8 +13,12 @@ describe Color do
       mocked_colors.should_receive(:basic_colors).with(no_args()).and_return(our_colors)
       mocked_colors.basic_colors
 
-#      generated_rand_colors = color.basic_colors
-#      single_test_color = generated_rand_colors[0]
+      # other test i wrote
+      # sample = Color.find(:all, :conditions => {:is_sample_color => "yes"} )
+      # @game.find_sample.should == sample
+      # @game.find_sample.length.should == 4
+      # @game.find_sample.include("red").should_be true
+      # @game.find_sample.include("blue").should_be true
 
     end
     it "should be a random set from the base colors" do
@@ -30,6 +31,14 @@ describe Color do
       end
 
     end
+    
+   it " lets the user add colors " do
+      new_color = "chartreuse"
+      Color.add(:name => new_color)
+      select_new_color = Color.find(:name => new_color)
+      select_new_color.should_not be_missing
+    end
+
   end
 end
 
