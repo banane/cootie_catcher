@@ -1,0 +1,46 @@
+%h1 Cootie Catcher Games!
+%p
+  - @colors = Color::BASIC_COLORS
+  - @colors.insert(0,'')
+  - @numbers_tall = ["1","2","5","6"]
+  - @numbers_wide = ["3","4","7","8"]
+  - @fortunes = Fortune::SAMPLE_FORTUNES
+  - form_for :game, @game, :url => { :action => "play" } do |f|
+    %p
+      =f.label :color_name, "Pick a color: "
+      =f.select :color_name, @colors,{}, :onchange=>{:javascript=>": playCootie(1,'tall');"}
+    %div{:style=>"", :id=>"closed"}
+      %img{:src=>"/images/cootie_closed.jpg"}
+    %div{:style=>"border:1px solid blue;width:258px;display:none", :id=>"tall"}
+      %div{:style=>"float:right;position:relative;width:129px;"}
+        %img{:src=>"/images/cootie_tallb.jpg"}
+      %div{:style=>"float:left;position:relative;width:129px;",}
+        %img{:src=>"/images/cootie_tall.jpg"}
+    %div{:style=>"border:1px solid blue;width:258px;display:none;", :id=>"wide"}
+      %div{:style=>"float:right;position:relative;width:129px;"}
+        %img{:src=>"/images/cootie_wideb.jpg"}
+      %div{:style=>"float:left;position:relative;width:129px;",}
+        %img{:src=>"/images/cootie_wide.jpg"}
+    %div{:style=>"display:none", :id =>"numbers_tall"}
+      =f.label :numbers, "Pick a number"
+      =f.select :numbers, @numbers_tall, {}, :onChange=>{:javascript=>": playCootie(2, 'tall');"}
+    %div{:style=>"display:none;", :id=>"numbers_wide"}
+      =f.label :numbers, "Pick a number"
+      =f.select :numbers, @numbers_wide, {}, :onChange=>{:javascript=>": playCootie(2,'wide');"}
+    %div{:style=>"display:none", :id =>"numbers2_tall"}
+      =f.label :numbers, "Pick a number"
+      =f.select :numbers2, @numbers_tall, {}, :onChange=>{:javascript=>": playCootie(3, 'tall');"}
+    %div{:style=>"display:none;", :id=>"numbers2_wide"}
+      =f.label :numbers, "Pick a number"
+      =f.select :numbers2, @numbers_wide, {}, :onChange=>{:javascript=>": playCootie(3,'wide');"}
+%div{:id=>"fortune"}
+  - i = 0
+  - @fortunes.each do |fo|
+    %p{:id=>"fortune_#{i}", :style=>"display:none;"}= fo
+    - i += 1
+
+
+
+
+
+

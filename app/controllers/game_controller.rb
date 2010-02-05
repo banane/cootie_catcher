@@ -1,32 +1,19 @@
 class GameController < ApplicationController
+STATUS = ["creation", "play"]
 
   def index
   end
 
+
   def new
-    
-  end
-
-  def create
-  end
-
-  def delete
-  end
-
-  def update
-  end
-
-  def show
-  end
-  
-  def color_selector(options)
-    def auto
+    @game = Game.create(params[:game])
+    respond_to do |format|
+      format.html
+      format.xml
     end
-    def manual
 
-    end
-    def sample
-      Color::OUR_SAMPLE_COLORS[]
-    end
+
   end
+
 end
+

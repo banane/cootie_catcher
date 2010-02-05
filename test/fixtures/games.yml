@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: Test Game 2
+  color_set_type: 
+  color_set: 
+  fortune_set_type: 
+  fortune_set: 
+  status: 
+  creator: Anna
+
+two:
+  name: "Test Game 3"
+  color_set_type: 
+  color_set: 
+  fortune_set_type: 
+  fortune_set: 
+  status: 
+  creator: Beth

@@ -9,22 +9,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100121033842) do
+ActiveRecord::Schema.define(:version => 20100203231932) do
 
   create_table "colors", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "color_name"
   end
 
-  create_table "cootie_catchers", :force => true do |t|
+  create_table "fortunes", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "fortunes", :force => true do |t|
+  create_table "games", :force => true do |t|
     t.string   "name"
+    t.string   "creator"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,17 @@
+%h1 cootie catcher!
+%h2 Create your own game!
+- form_for :game, @game, :url => { :action => "create" } do |f|
+  %p 
+    = f.label :name, "Give your game a name!"
+    %br= f.text_field :name
+  %p
+    = f.label :color_set_type, "How do you want to select your colors?"
+    %br= f.select :color_set_type, Game::COLOR_SET_TYPES   
+  %p
+    = f.label :fortune_set_type, "How do you want to create fortunes?"
+    %br= f.select :fortune_set_type, Game::FORTUNE_SET_TYPES
+  %p 
+    = f.label :creator, "Who created this masterpiece?"
+    %br= f.text_field :creator
+  %p= f.submit 'Create'
+
