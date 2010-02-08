@@ -1,0 +1,106 @@
+<html>
+<head>
+	<script src="javascripts/prototype.js"></script>
+	<script src="javascripts/cootie.js"></script>
+	<LINK REL="StyleSheet" href="stylesheets/cootie.css" type="text/css">
+<body>
+<h1>Cootie Catcher!</h1>
+<div id='progress'>
+  <div class='progressStage' id='stage1'></div>
+  <div class='progressStage' id='stage2'></div>
+
+  <div class='progressStage' id='stage3'></div>
+</div>
+<div id='instructions'>Pick a color.</div>
+<div id='closed' style=''>
+  <div class='cootieRow1'>
+    <a href="javascript: playCootie('red');">
+      <div class='cootieLeftCell'>
+        <img src='images/red.png' />
+      </div>
+    </a>
+
+    <a href="javascript: playCootie('green');">
+      <div class='cootieRightCell'>
+        <img src='images/green.png' />
+      </div>
+    </a>
+  </div>
+  <div class='cootieRow2'>
+    <a href="javascript: playCootie('blue');">
+      <div class='cootieLeftCell'>
+
+        <img src='images/blue.png' />
+      </div>
+    </a>
+    <a href="javascript: playCootie('yellow');">
+      <div class='cootieRightCell'>
+        <img src='images/yellow.png' />
+      </div>
+    </a>
+  </div>
+
+</div>
+<div id='tall' style='display:none;'>
+  <div class='cootieRow1'>
+    <a href='javascript: playCootie(2)'>
+      <div class='cootieLeftCell'>
+        <img src='images/2.png' />
+      </div>
+    </a>
+    <a href='javascript: playCootie(5)'>
+      <div class='cootieRightCell'>
+
+        <img src='images/5.png' />
+      </div>
+    </a>
+  </div>
+  <div class='cootieRow2'>
+    <a href='javascript: playCootie(1)'>
+      <div class='cootieLeftCell'>
+        <img src='images/1.png' />
+      </div>
+
+    </a>
+    <a href='javascript: playCootie(6)'>
+      <div class='cootieRightCell'>
+        <img src='images/6.png' />
+      </div>
+    </a>
+  </div>
+</div>
+<div id='wide' style='display:none;'>
+  <div class='cootieRow1'>
+
+    <a href='javascript: playCootie(3)'>
+      <div class='cootieLeftCell'>
+        <img src='images/3.png' />
+      </div>
+    </a>
+    <a href='javascript: playCootie(4)'>
+      <div class='cootieRightCell'>
+        <img src='images/4.png' />
+      </div>
+
+    </a>
+  </div>
+  <div class='cootieRow2'>
+    <a href='javascript: playCootie(8)'>
+      <div class='cootieLeftCell'>
+        <img src='images/8.png' />
+      </div>
+    </a>
+    <a href='javascript: playCootie(7)'>
+
+      <div class='cootieRightCell'>
+        <img src='images/7.png' />
+      </div>
+    </a>
+  </div>
+</div>
+<p id='play again' style='display:none'>
+  <a href='index.html'>Play again!</a>
+</p>
+
+</body> 
+</html>

@@ -1,0 +1,81 @@
+body {
+   font-family:comic sans, helvetica, arial;	
+
+}
+img {
+	border:none;
+}
+
+div#tall div.cootieRow1{
+	height:171px;
+	width:299px;
+}
+
+div#tall div.cootieRow2{
+	height:171px; 
+	width:300px;
+}
+
+div#wide div.cootieRow1{
+/*   border:2px solid black;*/
+	height:133px;
+	width:298px;
+}
+
+div#wide div.cootieRow2{
+/*	border:1px solid red;*/
+	height:128px; 
+	width:300px;
+}
+div#closed div.cootieRow1 {
+/*	border:2px solid black;*/
+	height:152px;
+	width:300px;
+}
+
+div#closed div.cootieRow2 {
+/*	border:1px red solid;*/
+	height:150px; 
+	width:299px;
+}
+
+div.cootieLeftCell{
+	float:left;
+	position:relative;	
+}
+
+div.cootieRightCell{
+	float:right;
+	position:relative;
+}
+
+div#progress {
+	width:500px;
+	border:1px dashed blue;
+	height:20px;
+	margin:5 5 15 0px;
+}
+.progressStage{
+	width:100px;
+	height:15px;
+	float:left;
+	position:relative;
+	text-align:center;
+	color:white;
+}
+
+p#fortune_id{
+	font-weight:bold;
+	text-align:center;
+	color:blue;
+	
+}
+
+div#instructions{
+	font-weight:bold;
+	border:1px dashed purple;
+	padding:4px;
+	margin:10 0 14 0px;
+	font-size:16pt;
+	width:500px;
+}
